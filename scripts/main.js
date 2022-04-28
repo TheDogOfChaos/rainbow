@@ -9,7 +9,7 @@ function changeTeam(){
     rainbow = true;
     while(rainbow = true){
         team++;
-        Vars.player.team(team);
+        Vars.player.team(team.get(team));
         if(team == 255){
              team = 1;
         }
