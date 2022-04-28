@@ -5,7 +5,7 @@ var team = Vars.state.rules.defaultTeam;
 var curTeam = Vars.state.rules.defaultTeam;
 var rainbow = false
 
-// clientside change, purely visual unless playing in singleplayer
+// let the rainbow begin
 function teamLocal(){
     while(rainbow = true){
         team++;
@@ -23,6 +23,7 @@ function changeTeam(){
     (Vars.net.client() ? teamLocal)();
 }
 
+// no more rainbow
 function stopChangeTeam(){
     rainbow = false;
 }
