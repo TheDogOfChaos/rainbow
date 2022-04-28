@@ -3,7 +3,7 @@ var dialog = null;
 var button = null;
 var team = Vars.state.rules.defaultTeam;
 var curTeam = Vars.state.rules.defaultTeam;
-var rainbow = false
+var rainbow = false;
 
 // let the rainbow begin
 function teamLocal(){
@@ -30,13 +30,13 @@ function stopChangeTeam(){
 
 // executed once ui button is pressed
 ui.onLoad(() => {
-	var placeButtons = table.table().bottom().get();
-	placeButtons.left().button("initiate rainbow", Icon.refresh, changeTeam);
-  placeButtons.right().button("cancel rainbow", Icon.cancel, stopChangeTeam);
-	dialog.addCloseButton();
+    var placeButtons = table.table().bottom().get();
+    placeButtons.left().button("initiate rainbow", Icon.refresh, changeTeam);
+    placeButtons.right().button("cancel rainbow", Icon.cancel, stopChangeTeam);
+    dialog.addCloseButton();
 });
 
 // ui button itself
 ui.addButton("rainbow", "brush", () => {
-	dialog.show();
+    dialog.show();
 });
