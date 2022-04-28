@@ -36,6 +36,6 @@ ui.onLoad(() => {
 });
 
 // ui button itself
-ui.addButton("Block placer", Icon.refresh, () => {
+ui.addButton("rainbow", "brush", () => {
 	dialog.show();
 });
