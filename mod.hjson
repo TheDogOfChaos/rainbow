@@ -1,0 +1,10 @@
+{
+  "name": "rainbow",
+  "author": "[#00ff00]Littlecat456",
+  "displayName": "rainbow",
+  "description": "pointless singleplayer mod",
+  "dependencies": [ "ui-lib" ],
+  "version": "1.0",
+  "hidden": true,
+  "minGameVersion": 105
+}
