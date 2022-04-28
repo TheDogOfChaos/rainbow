@@ -5,7 +5,8 @@ var team = Vars.state.rules.defaultTeam;
 var rainbow = false;
 
 // let the rainbow begin
-function teamLocal(){
+function changeTeam(){
+    rainbow = true;
     while(rainbow = true){
         team++;
         Vars.player.team(team);
@@ -13,12 +14,6 @@ function teamLocal(){
              team = 1;
         }
     }
-}
-
-// calls teamLocal
-function changeTeam(){
-    rainbow = true;
-    (Vars.net.client() ? teamLocal)();
 }
 
 // no more rainbow
