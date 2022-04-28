@@ -2,15 +2,13 @@ const ui = require("ui-lib/library");
 var dialog = null;
 var button = null;
 var team = Vars.state.rules.defaultTeam;
-var curTeam = Vars.state.rules.defaultTeam;
 var rainbow = false;
 
 // let the rainbow begin
 function teamLocal(){
     while(rainbow = true){
         team++;
-        curTeam = team;
-        Vars.player.team(curTeam);
+        Vars.player.team(team);
         if(team == 255){
              team = 1;
         }
