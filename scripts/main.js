@@ -23,6 +23,8 @@ function stopChangeTeam(){
 
 // executed once ui button is pressed
 ui.onLoad(() => {
+    dialog = new BaseDialog("Change team");
+    const table = dialog.cont;
     var placeButtons = table.table().bottom().get();
     placeButtons.left().button("initiate rainbow", Icon.refresh, changeTeam);
     placeButtons.right().button("cancel rainbow", Icon.cancel, stopChangeTeam);
