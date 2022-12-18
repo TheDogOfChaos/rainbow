@@ -1,4 +1,4 @@
-const ui = require("ui-lib-noBL/scripts/library");
+const ui = require("ui-lib-nobl/scripts/library");
 var dialog = null;
 var button = null;
 var team = Vars.state.rules.defaultTeam;
