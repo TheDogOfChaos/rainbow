@@ -3,7 +3,7 @@
   "author": "[#00ff00]Littlecat456",
   "displayName": "rainbow",
   "description": "pointless singleplayer mod, does not work in multiplayer",
-  "dependencies": [ "ui-lib" ],
+  "dependencies": [ "ui-lib-noBL" ],
   "version": "1.0",
   "hidden": true,
   "minGameVersion": 136
