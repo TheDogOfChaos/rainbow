@@ -4,17 +4,25 @@ var button = null;
 var team = Vars.state.rules.defaultTeam;
 var rainbow = false;
 
-// let the rainbow begin
-function changeTeam(){
-    rainbow = true;
-    while(rainbow = true){
-        team++;
-        Vars.player.team(team.get(team));
-        if(team == 255){
-             team = 1;
-        }
-    }
+// let the ra// Delay between team changes, in milliseconds
+const DELAY = 500;
+
+function changeTeam() {
+  // Set the player's team to the next team in the list
+  team++;
+  Vars.player.team(Vars.state.teams.get(team));
+
+  // If the team number is out of range, reset it to the first team
+  if (team == Vars.state.teams.length - 1) {
+    team = 1;
+  }
+
+  // If the rainbow mode is still active, schedule another team change
+  if (rainbow) {
+    setTimeout(changeTeam, DELAY);
+  }
 }
+
 
 // no more rainbow
 function stopChangeTeam(){
@@ -33,5 +41,5 @@ ui.onLoad(() => {
 
 // ui button itself
 ui.addButton("rainbow", "brush", () => {
-    dialog.show();
+    dialog.show();l
 });
